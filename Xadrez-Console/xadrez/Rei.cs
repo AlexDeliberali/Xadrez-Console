@@ -28,56 +28,56 @@ namespace xadrez
             #region validaPosicoes
 
             //Verificando acima se está livre ou com outra peça
-            pos.definirValores(pos.linha - 1, pos.coluna);
+            pos.definirValores(posicao.linha - 1, posicao.coluna);
             if(tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
             }
 
             //Verificando nordeste se está livre ou com outra peça
-            pos.definirValores(pos.linha - 1, pos.coluna+1);
+            pos.definirValores(posicao.linha - 1, posicao.coluna + 1);
             if (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
             }
 
             //Verificando leste se está livre ou com outra peça
-            pos.definirValores(pos.linha, pos.coluna + 1);
+            pos.definirValores(posicao.linha, posicao.coluna + 1);
             if (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
             }
 
             //Verificando sudeste se está livre ou com outra peça
-            pos.definirValores(pos.linha + 1, pos.coluna + 1);
+            pos.definirValores(posicao.linha + 1, posicao.coluna + 1);
             if (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
             }
 
             //Verificando norte se está livre ou com outra peça
-            pos.definirValores(pos.linha + 1, pos.coluna);
+            pos.definirValores(posicao.linha + 1, posicao.coluna);
             if (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
             }
 
             //Verificando sudoeste se está livre ou com outra peça
-            pos.definirValores(pos.linha + 1, pos.coluna + 1);
+            pos.definirValores(posicao.linha + 1, posicao.coluna - 1);
             if (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
             }
 
             //Verificando oeste se está livre ou com outra peça
-            pos.definirValores(pos.linha, pos.coluna - 1);
+            pos.definirValores(posicao.linha, posicao.coluna - 1);
             if (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
             }
 
             //Verificando noroeste se está livre ou com outra peça
-            pos.definirValores(pos.linha - 1, pos.coluna- 1);
+            pos.definirValores(posicao.linha - 1, posicao.coluna - 1);
             if (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;

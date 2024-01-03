@@ -30,7 +30,7 @@ namespace xadrez
             #region validaPosicoes
 
             //Verificando acima se está livre ou com outra peça
-            pos.definirValores(pos.linha - 1, pos.coluna);
+            pos.definirValores(posicao.linha - 1, posicao.coluna);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
@@ -43,7 +43,7 @@ namespace xadrez
             }
 
             //Verificando abaixo se está livre ou com outra peça
-            pos.definirValores(pos.linha + 1, pos.coluna);
+            pos.definirValores(posicao.linha + 1, posicao.coluna);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
@@ -56,7 +56,7 @@ namespace xadrez
             }
 
             //Verificando direita se está livre ou com outra peça
-            pos.definirValores(pos.linha, pos.coluna + 1);
+            pos.definirValores(posicao.linha, posicao.coluna + 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
@@ -69,7 +69,7 @@ namespace xadrez
             }
 
             //Verificando esquerda se está livre ou com outra peça
-            pos.definirValores(pos.linha, pos.coluna - 1);
+            pos.definirValores(posicao.linha, posicao.coluna - 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
