@@ -1,4 +1,6 @@
-﻿namespace tabuleiro
+﻿using System.Runtime.ExceptionServices;
+
+namespace tabuleiro
 {
     class Tabuleiro
     {
@@ -37,6 +39,18 @@
             }
             pecas[pos.linha, pos.coluna] = p;
             p.posicao = pos;
+        }
+
+        public Peca retirarPeca(Posicao pos)
+        {
+            //Não tem peça na posição, retorna null
+            if (peca(pos) == null) {
+                return null;
+            }
+            Peca aux = peca(pos);
+            aux.posicao = null;
+            pecas[pos.linha, pos.coluna] = null;
+            return aux;
         }
 
         public bool posicaoValida(Posicao pos)
