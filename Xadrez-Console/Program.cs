@@ -40,6 +40,7 @@ namespace Xadrez_Console
                     catch(TabuleiroException e)
                     {
                         Console.WriteLine(e.Message);
+                        Console.ReadLine();
                     }
                 }
 
